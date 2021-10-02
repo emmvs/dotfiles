@@ -49,3 +49,5 @@
 
 [pull]
   rebase = false
+[user]
+	email = emmaruenzel@gmx.de
