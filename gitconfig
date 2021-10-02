@@ -50,4 +50,4 @@
 [pull]
   rebase = false
 [user]
-	email = emmaruenzel@gmx.de
+	email = cd ~/code/$GITHUB_USERNAME/dotfiles && zsh git_setup.sh
