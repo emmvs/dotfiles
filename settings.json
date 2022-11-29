@@ -62,7 +62,6 @@
         "**/tmp/**": true,
         "**/vendor/**": true
     },
-    "git.enabled": false,
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "[python]":
@@ -75,5 +74,30 @@
     {
         "rubocop": true
     },
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "newUntitledFile",
+    "bracket-pair-colorizer-2.depreciation-notice": false,
+
+    // Personal Config
+
+    // Autosave
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 100,
+    "files.associations": {
+      "*.html.erb": "erb"
+    },
+    "workbench.editorAssociations": {
+      "*.erb": "default"
+    },
+    "editor.inlineSuggest.enabled": true,
+
+    // Customized Sass Compiler
+    "liveSassCompile.settings.formats": [
+      {
+        "format": "compressed",
+        "extensionName": ".css",
+        "savePath": "/dist",
+        "savePathReplacementPairs": null
+      }
+    ],
+    "window.zoomLevel": -1
 }

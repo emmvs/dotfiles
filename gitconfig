@@ -50,5 +50,9 @@
 [pull]
   rebase = false
 [user]
-	email = emmaruenzel@gmx.de
+	email = emma@ruenzel.de
 	name = Emma Rünzel
+
+# Change main to master
+[init]
+  defaultBranch = master
