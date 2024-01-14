@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 ZSH=$HOME/.oh-my-zsh
 
 # You can change the theme with another one from https://github.com/robbyrussell/oh-my-zsh/wiki/themes
@@ -15,6 +17,7 @@ ZSH_DISABLE_COMPFIX=true
 # Actually load Oh-My-Zsh
 source "${ZSH}/oh-my-zsh.sh"
 unalias rm # No interactive rm by default (brought by plugins/common-aliases)
+unalias lt # we need `lt` for https://github.com/localtunnel/localtunnel
 
 # Load rbenv if installed (to manage your Ruby versions)
 export PATH="${HOME}/.rbenv/bin:${PATH}" # Needed for Linux/WSL
@@ -22,7 +25,7 @@ type -a rbenv > /dev/null && eval "$(rbenv init -)"
 
 # Load pyenv (to manage your Python versions)
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)" && RPROMPT+='[🐍 $(pyenv_prompt_info)]'
+type -a pyenv > /dev/null && eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init - 2> /dev/null)" && RPROMPT+='[🐍 $(pyenv version-name)]'
 
 # Load nvm (to manage your node versions)
 export NVM_DIR="$HOME/.nvm"
@@ -65,3 +68,48 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 export BUNDLER_EDITOR=code
+export EDITOR=code
+
+# Set ipdb as the default Python debugger
+export PYTHONBREAKPOINT=ipdb.set_trace
+
+eval $(thefuck --alias)
+
+# Colorful Tabs
+PRELINE="\r\033[A"
+
+function random {
+    echo -e "\033]6;1;bg;red;brightness;$((1 + $RANDOM % 255))\a"$PRELINE
+    echo -e "\033]6;1;bg;green;brightness;$((1 + $RANDOM % 255))\a"$PRELINE
+    echo -e "\033]6;1;bg;blue;brightness;$((1 + $RANDOM % 255))\a"$PRELINE
+}
+
+function color {
+    case $1 in
+    green)
+    echo -e "\033]6;1;bg;red;brightness;57\a"$PRELINE
+    echo -e "\033]6;1;bg;green;brightness;197\a"$PRELINE
+    echo -e "\033]6;1;bg;blue;brightness;77\a"$PRELINE
+    ;;
+    red)
+    echo -e "\033]6;1;bg;red;brightness;270\a"$PRELINE
+    echo -e "\033]6;1;bg;green;brightness;60\a"$PRELINE
+    echo -e "\033]6;1;bg;blue;brightness;83\a"$PRELINE
+    ;;
+    orange)
+    echo -e "\033]6;1;bg;red;brightness;227\a"$PRELINE
+    echo -e "\033]6;1;bg;green;brightness;143\a"$PRELINE
+    echo -e "\033]6;1;bg;blue;brightness;10\a"$PRELINE
+    ;;
+    *)
+    random
+    esac
+}
+
+color
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+eval "$(direnv hook zsh)"
