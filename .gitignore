@@ -1,0 +1,12 @@
+.DS_Store
+*.backup
+
+# Local-only files: never commit
+machine-specific
+.gitconfig.local
+.env
+.env.*
+*.pem
+*.key
+id_rsa*
+id_ed25519*

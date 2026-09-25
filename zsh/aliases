@@ -1,0 +1,12 @@
+# ------------------------------------
+# Aliases
+# ------------------------------------
+alias zshconfig="code ~/.zshrc"
+
+# Homebrew
+alias brew_check="brew update && brew outdated"
+alias brew_update="brew update && brew upgrade && brew cleanup"
+alias brew_sweep="brew cleanup"
+
+# Navigation
+alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs/"

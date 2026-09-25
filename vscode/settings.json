@@ -1,0 +1,5 @@
+{
+  // Terminal autocomplete (needs shell integration, which is on by default)
+  "terminal.integrated.shellIntegration.enabled": true,
+  "terminal.integrated.suggest.enabled": true
+}

@@ -1,0 +1,5 @@
+# Copied to ~/.machine-specific by setup.sh (only if it doesn't exist yet).
+# Put anything here you don't want in a public repo: work-only env vars,
+# tokens, per-machine PATH tweaks. It's sourced at the end of zshrc.
+#
+# Git identity does NOT go here — setup.sh writes it to ~/.gitconfig.local.

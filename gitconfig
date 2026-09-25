@@ -1,0 +1,22 @@
+# No [user] block here on purpose: this file is public.
+# Identity lives in ~/.gitconfig.local (created by setup.sh, never committed).
+[include]
+  path = ~/.gitconfig.local
+[core]
+  editor = code --wait
+  pager = cat
+  excludesfile = ~/.gitignore_global
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  hist = log --pretty=format:\"%h %ad (%cr) | %s%C(auto)%d%Creset [%an]\" --graph --date=short
+[pull]
+  ff = only
+[push]
+  default = current
+  autoSetupRemote = true
+[init]
+  defaultBranch = main
