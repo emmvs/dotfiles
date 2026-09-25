@@ -2,6 +2,10 @@
 
 My personal macOS setup, based on my "Setup Day" checklist.
 
+Everything from the original Notion notes — commands, links, VS Code settings
+and extension lists — is archived in [`SETUP-DAY.md`](SETUP-DAY.md), so the
+information survives even if the scripts stop working.
+
 ## Quick start
 
 ```bash
@@ -40,11 +44,15 @@ installer and exits — finish the dialog, then run `./setup.sh` again.
 - [ ] Sign in to Apple ID
 - [ ] Verify keyboard repeat rate / delay (System Settings → Keyboard)
 - [ ] Verify hot corner (bottom right → Desktop)
-- [ ] Browser extensions: Momentum Dash, 1Password, Grammarly, Deodorant,
-      ColorZilla, Vue Devtools
-- [ ] App Store: BetterSnapTool
+- [ ] Browser extensions (links in [`SETUP-DAY.md`](SETUP-DAY.md#-browser)):
+      Momentum Dash, 1Password, Grammarly, Deodorant, ColorZilla, Vue Devtools
+- [ ] App Store: BetterSnapTool — set shortcuts for Maximize, Snap window to
+      the left, Snap window to the right
 - [ ] reMarkable desktop app (no Homebrew cask; download from remarkable.com)
 - [ ] Raycast: import your profile to keep extensions
+- [ ] VS Code: settings and extensions from my notes (Auto Save `onFocusChange`,
+      accept suggestion on enter off, tab size 2; extensions in
+      [`vscode/extensions.txt`](vscode/extensions.txt))
 
 ## Updating
 

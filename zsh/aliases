@@ -1,7 +1,7 @@
 # ------------------------------------
 # Aliases
 # ------------------------------------
-alias zshconfig="code ~/.zshrc"
+alias zshconfig="open ~/.zshrc"
 
 # Homebrew
 alias brew_check="brew update && brew outdated"

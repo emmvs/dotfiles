@@ -28,6 +28,7 @@ cask "firefox@developer-edition"
 # ------------------------------------
 cask "visual-studio-code"
 cask "sublime-text"
+# Notion originally had the CLI formula: brew "docker"
 cask "docker-desktop"
 cask "rubymine"
 cask "postman"
