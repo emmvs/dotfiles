@@ -1,5 +1,10 @@
 {
   // Terminal autocomplete (needs shell integration, which is on by default)
   "terminal.integrated.shellIntegration.enabled": true,
-  "terminal.integrated.suggest.enabled": true
+  "terminal.integrated.suggest.enabled": true,
+
+  // Dev containers: clone this repo into every new container and install Claude Code skills
+  "dotfiles.repository": "emmvs/dotfiles",
+  "dotfiles.targetPath": "~/dotfiles",
+  "dotfiles.installCommand": "devcontainer-install.sh"
 }

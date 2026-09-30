@@ -39,6 +39,15 @@ installer and exits — finish the dialog, then run `./setup.sh` again.
 | `vscode/settings.json`     | `~/Library/Application Support/Code/User/settings.json` |
 | `vscode/keybindings.json`  | `~/Library/Application Support/Code/User/keybindings.json` |
 
+## Dev containers
+
+[`vscode/settings.json`](vscode/settings.json) sets `dotfiles.repository`, so
+VS Code clones this repo to `~/dotfiles` in every new dev container and runs
+[`devcontainer-install.sh`](devcontainer-install.sh). It clones
+[emmvs/skills](https://github.com/emmvs/skills) to `~/.claude/skills-src` and
+symlinks each skill into `~/.claude/skills`, so Claude Code picks them up after
+a rebuild. Start a new Claude session to load them.
+
 ## Manual checklist
 
 - [ ] Sign in to Apple ID
